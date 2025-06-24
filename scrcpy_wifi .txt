@@ -1,0 +1,17 @@
+@echo off
+chcp 65001 >nul
+set IP=192.168.?.??
+
+cd /d "C:\Users\ИМЯПОЛЬЗОВАТЕЛЯ\Desktop\scrcpy-win64-v3.3.1"
+
+echo Connecting to ADB over Wi-Fi (%IP%)...
+adb connect %IP% >nul
+
+if %errorlevel% neq 0 (
+    echo [ERROR] Failed to connect to device at %IP%
+    pause
+    exit /b
+)
+
+echo [OK] Device connected. Launching Scrcpy...
+start scrcpy.exe --mouse=uhid --keyboard=uhid --fullscreen --stay-awake --max-size=1280

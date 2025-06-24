@@ -1,2 +1,2 @@
 # scrcpy-hid-wifi-launcher
-Launch scrcpy with HID over Wi-Fi using a .bat file
+Запустите scrcpy с HID по Wi-Fi с помощью .bat-файла
